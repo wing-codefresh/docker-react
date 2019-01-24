@@ -5,4 +5,5 @@ services:
 before_install:
   - docker build -t wing39/docker-react -f Dockerfile.dev .
 
-
+script: 
+  - docker run wing39/docker-react npm run test -- --coverage
